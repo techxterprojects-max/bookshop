@@ -3,25 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LXE Creative | Coloring Books by Angelica White</title>
-    <!-- Google Fonts for Botanical Hand-Drawn Editorial Elegance -->
+    <title>LXE Creative | Colorful Coloring Books by Angelica White</title>
+    <!-- Google Fonts: Bubbly & Playful (Fredoka & Poppins) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
         :root {
-            --bg-color: #FDFBF7;
-            --surface-color: #FFFFFF;
+            --bg-pink: #FFF0F5;
+            --hot-pink: #FF1493;
+            --electric-blue: #00BFFF;
+            --sunshine-yellow: #FFD700;
+            --purple-pop: #9932CC;
+            --text-dark: #2A0845;
             --card-bg: #FFFFFF;
-            --text-main: #3E352B;
-            --text-muted: #7E746A;
-            --accent-botanical: #4A6B5B;
-            --accent-gold: #C5A059;
-            --border-color: #E8E2D5;
-            --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            --transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
 
         * {
@@ -31,15 +30,19 @@
         }
 
         body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-main);
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-pink);
+            color: var(--text-dark);
             line-height: 1.6;
             overflow-x: hidden;
+            background-image: radial-gradient(var(--sunshine-yellow) 15%, transparent 16%), radial-gradient(var(--electric-blue) 15%, transparent 16%);
+            background-size: 60px 60px;
+            background-position: 0 0, 30px 30px;
+            background-attachment: fixed;
         }
 
-        h1, h2, h3, h4, .serif-font {
-            font-family: 'Playfair Display', serif;
+        h1, h2, h3, h4, .brand-title {
+            font-family: 'Fredoka', cursive;
         }
 
         a {
@@ -49,91 +52,103 @@
 
         /* Announcement Bar */
         .announcement-bar {
-            background-color: var(--accent-botanical);
-            color: #F5F5F5;
+            background: linear-gradient(90deg, var(--hot-pink), var(--purple-pop), var(--electric-blue));
+            color: white;
             text-align: center;
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             padding: 10px 16px;
+            font-weight: 600;
             letter-spacing: 0.05em;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
 
         /* Navigation */
         header {
             position: sticky;
             top: 0;
-            background-color: rgba(253, 251, 247, 0.95);
+            background-color: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
-            border-bottom: 1px solid var(--border-color);
+            border-bottom: 4px solid var(--hot-pink);
             z-index: 1000;
         }
 
         .nav-container {
             max-width: 1280px;
             margin: 0 auto;
-            padding: 20px 40px;
+            padding: 15px 40px;
             display: flex;
             align-items: center;
             justify-content: space-between;
         }
 
         .logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.6rem;
+            font-family: 'Fredoka', cursive;
+            font-size: 2rem;
             font-weight: 700;
-            letter-spacing: -0.02em;
-            color: var(--text-main);
+            color: var(--hot-pink);
+            text-shadow: 2px 2px 0px var(--sunshine-yellow);
             cursor: pointer;
-            font-style: italic;
         }
 
         .logo span {
-            color: var(--accent-botanical);
+            color: var(--electric-blue);
         }
 
         .nav-links {
             display: flex;
-            gap: 32px;
-            font-size: 0.95rem;
-            font-weight: 500;
+            gap: 30px;
+            font-size: 1.05rem;
+            font-weight: 600;
         }
 
         .nav-links a {
             transition: var(--transition);
+            color: var(--text-dark);
             cursor: pointer;
         }
 
         .nav-links a:hover, .nav-links a.active {
-            color: var(--accent-botanical);
+            color: var(--hot-pink);
+            transform: scale(1.1);
         }
 
         .cart-btn {
-            background: none;
-            border: none;
-            font-size: 1.1rem;
+            background: var(--sunshine-yellow);
+            border: 3px solid var(--hot-pink);
+            font-size: 1.2rem;
             cursor: pointer;
             position: relative;
-            color: var(--text-main);
-            transition: var(--transition);
-        }
-
-        .cart-btn:hover {
-            color: var(--accent-botanical);
-        }
-
-        .cart-badge {
-            position: absolute;
-            top: -8px;
-            right: -10px;
-            background-color: var(--accent-botanical);
-            color: white;
-            font-size: 0.7rem;
-            width: 18px;
-            height: 18px;
+            color: var(--text-dark);
+            width: 45px;
+            height: 45px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-weight: 600;
+            transition: var(--transition);
+            box-shadow: 0 4px 0px var(--hot-pink);
+        }
+
+        .cart-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 7px 0px var(--hot-pink);
+        }
+
+        .cart-badge {
+            position: absolute;
+            top: -6px;
+            right: -6px;
+            background-color: var(--hot-pink);
+            color: white;
+            font-size: 0.75rem;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            border: 2px solid white;
         }
 
         /* Page Views Container */
@@ -148,111 +163,77 @@
             display: block;
         }
 
-        /* Johanna Basford Style Hero Frame */
-        .botanical-hero-frame {
-            position: relative;
-            background-color: #F6F3EC;
-            border: 2px solid var(--border-color);
-            border-radius: 16px;
-            padding: 100px 60px;
-            text-align: center;
-            margin-bottom: 80px;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.03);
-            overflow: hidden;
-        }
-
-        .botanical-hero-frame::before,
-        .botanical-hero-frame::after {
-            content: "";
-            position: absolute;
-            width: 150px;
-            height: 150px;
-            opacity: 0.35;
-            pointer-events: none;
-        }
-
-        .botanical-hero-frame::before {
-            top: 20px;
-            left: 20px;
-            border-top: 3px solid var(--accent-botanical);
-            border-left: 3px solid var(--accent-botanical);
-            border-top-left-radius: 20px;
-        }
-
-        .botanical-hero-frame::after {
-            bottom: 20px;
-            right: 20px;
-            border-bottom: 3px solid var(--accent-botanical);
-            border-right: 3px solid var(--accent-botanical);
-            border-bottom-right-radius: 20px;
-        }
-
-        .brand-subtitle {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.1rem;
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
-            color: var(--text-muted);
-            margin-bottom: 16px;
-            font-style: italic;
-        }
-
-        .hero-welcome {
-            font-size: 1.4rem;
-            font-weight: 400;
-            color: var(--text-muted);
-            font-style: italic;
-            margin-bottom: 10px;
-        }
-
-        .botanical-hero-frame h1 {
-            font-size: 4rem;
-            font-weight: 700;
-            color: var(--text-main);
-            margin-bottom: 30px;
-            font-style: italic;
-            letter-spacing: -0.02em;
-        }
-
-        .botanical-hero-frame .divider {
-            display: flex;
+        /* Hero Section (Home) */
+        .hero {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 50px;
             align-items: center;
-            justify-content: center;
-            gap: 20px;
-            color: var(--text-muted);
+            margin-bottom: 80px;
+        }
+
+        .hero-content h1 {
+            font-size: 3.8rem;
+            line-height: 1.15;
+            margin-bottom: 20px;
+            color: var(--hot-pink);
+            text-shadow: 3px 3px 0px var(--sunshine-yellow);
+        }
+
+        .hero-content h1 span {
+            color: var(--electric-blue);
+        }
+
+        .hero-content p {
+            font-size: 1.15rem;
+            color: var(--text-dark);
             margin-bottom: 30px;
-            font-style: italic;
+            font-weight: 500;
         }
 
-        .botanical-hero-frame .divider::before,
-        .botanical-hero-frame .divider::after {
-            content: "";
-            height: 1px;
-            width: 80px;
-            background-color: var(--border-color);
-        }
-
-        .btn-botanical {
+        .btn-rainbow {
             display: inline-flex;
             align-items: center;
             gap: 12px;
-            background-color: var(--accent-botanical);
+            background: linear-gradient(45deg, var(--hot-pink), var(--purple-pop));
             color: white;
-            padding: 16px 38px;
-            border-radius: 30px;
-            font-weight: 500;
-            font-size: 1rem;
-            border: none;
+            padding: 16px 36px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            border: 3px solid white;
             cursor: pointer;
+            box-shadow: 0 6px 20px rgba(255, 20, 147, 0.4);
             transition: var(--transition);
-            letter-spacing: 0.05em;
-            box-shadow: 0 4px 15px rgba(74, 107, 91, 0.2);
         }
 
-        .btn-botanical:hover {
-            background-color: #385144;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(74, 107, 91, 0.3);
+        .btn-rainbow:hover {
+            transform: translateY(-4px) scale(1.05);
+            box-shadow: 0 10px 25px rgba(255, 20, 147, 0.6);
+        }
+
+        .hero-banner-art {
+            background: linear-gradient(135deg, var(--electric-blue), var(--purple-pop));
+            border-radius: 30px;
+            padding: 50px;
+            text-align: center;
+            color: white;
+            box-shadow: 0 15px 35px rgba(0, 191, 255, 0.3);
+            border: 5px solid white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-banner-art i {
+            font-size: 5rem;
+            color: var(--sunshine-yellow);
+            margin-bottom: 20px;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
         }
 
         .section-header {
@@ -260,14 +241,14 @@
             justify-content: space-between;
             align-items: flex-end;
             margin-bottom: 40px;
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 20px;
+            border-bottom: 3px dashed var(--hot-pink);
+            padding-bottom: 15px;
         }
 
         .section-header h2 {
-            font-size: 2.2rem;
-            font-weight: 600;
-            font-style: italic;
+            font-size: 2.5rem;
+            color: var(--hot-pink);
+            text-shadow: 2px 2px 0px var(--sunshine-yellow);
         }
 
         /* Filter Buttons */
@@ -277,48 +258,52 @@
         }
 
         .filter-btn {
-            background: none;
-            border: 1px solid var(--border-color);
-            padding: 8px 18px;
+            background: white;
+            border: 2px solid var(--hot-pink);
+            padding: 10px 20px;
             border-radius: 30px;
-            font-size: 0.85rem;
-            font-weight: 500;
+            font-size: 0.95rem;
+            font-weight: 700;
             cursor: pointer;
             transition: var(--transition);
+            color: var(--hot-pink);
         }
 
         .filter-btn.active, .filter-btn:hover {
-            background-color: var(--accent-botanical);
+            background-color: var(--hot-pink);
             color: white;
-            border-color: var(--accent-botanical);
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(255, 20, 147, 0.3);
         }
 
         /* Products Grid */
         .products-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 40px;
+            gap: 35px;
             margin-bottom: 60px;
         }
 
         .product-card {
-            background-color: var(--surface-color);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
+            background-color: var(--card-bg);
+            border: 4px solid var(--electric-blue);
+            border-radius: 20px;
             overflow: hidden;
             transition: var(--transition);
             display: flex;
             flex-direction: column;
+            box-shadow: 0 8px 25px rgba(0, 191, 255, 0.2);
         }
 
         .product-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 30px rgba(0,0,0,0.05);
+            transform: translateY(-8px) rotate(1deg);
+            box-shadow: 0 15px 35px rgba(255, 20, 147, 0.3);
+            border-color: var(--hot-pink);
         }
 
         .product-thumb {
-            height: 280px;
-            background-color: #F4F1EA;
+            height: 240px;
+            background: linear-gradient(135deg, #FFE4E1, #E0FFFF);
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -327,21 +312,13 @@
             text-align: center;
             position: relative;
             cursor: pointer;
-            border-bottom: 1px solid var(--border-color);
+            border-bottom: 3px solid var(--electric-blue);
         }
 
         .product-thumb i {
-            font-size: 2.5rem;
-            color: var(--accent-botanical);
-            margin-bottom: 12px;
-        }
-
-        .product-thumb span {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            font-weight: 500;
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
+            font-size: 3.5rem;
+            color: var(--hot-pink);
+            margin-bottom: 10px;
         }
 
         .product-info {
@@ -352,31 +329,31 @@
         }
 
         .product-category {
-            font-size: 0.75rem;
+            font-size: 0.8rem;
             text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: var(--text-muted);
-            margin-bottom: 8px;
-            font-weight: 600;
+            letter-spacing: 0.05em;
+            color: var(--purple-pop);
+            margin-bottom: 6px;
+            font-weight: 700;
         }
 
         .product-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.25rem;
+            font-family: 'Fredoka', cursive;
+            font-size: 1.3rem;
             font-weight: 600;
             margin-bottom: 10px;
-            line-height: 1.3;
+            color: var(--text-dark);
             cursor: pointer;
             transition: var(--transition);
         }
 
         .product-title:hover {
-            color: var(--accent-botanical);
+            color: var(--hot-pink);
         }
 
         .product-description {
             font-size: 0.9rem;
-            color: var(--text-muted);
+            color: #555;
             margin-bottom: 20px;
             flex-grow: 1;
         }
@@ -386,13 +363,14 @@
             align-items: center;
             justify-content: space-between;
             margin-top: auto;
-            padding-top: 16px;
-            border-top: 1px solid var(--border-color);
+            padding-top: 15px;
+            border-top: 2px dashed #eee;
         }
 
         .product-price {
-            font-weight: 600;
-            font-size: 1.1rem;
+            font-weight: 700;
+            font-size: 1.25rem;
+            color: var(--hot-pink);
         }
 
         .card-actions {
@@ -401,77 +379,81 @@
         }
 
         .btn-icon {
-            width: 36px;
-            height: 36px;
-            border-radius: 4px;
-            border: 1px solid var(--border-color);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 2px solid var(--hot-pink);
             background: white;
             display: flex;
             align-items: center;
             justify-content: center;
             cursor: pointer;
             transition: var(--transition);
-            color: var(--text-main);
+            color: var(--hot-pink);
         }
 
         .btn-icon:hover {
-            background-color: var(--accent-botanical);
+            background-color: var(--hot-pink);
             color: white;
-            border-color: var(--accent-botanical);
+            transform: scale(1.1);
         }
 
         .btn-amazon {
             background-color: #FF9900;
             border-color: #FF9900;
-            color: #111;
+            color: white;
         }
 
         .btn-amazon:hover {
             background-color: #e88b00;
             border-color: #e88b00;
-            color: #111;
+            color: white;
         }
 
         /* About Page Layout */
         .about-section {
-            background-color: #F4F1EA;
-            border-radius: 12px;
-            padding: 80px;
+            background: white;
+            border: 5px solid var(--purple-pop);
+            border-radius: 30px;
+            padding: 60px;
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 60px;
+            gap: 50px;
             align-items: center;
-            border: 1px solid var(--border-color);
+            box-shadow: 0 10px 30px rgba(153, 50, 204, 0.2);
         }
 
         .about-text h2 {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
+            color: var(--purple-pop);
             margin-bottom: 20px;
-            font-style: italic;
         }
 
         .about-text p {
-            color: var(--text-muted);
+            color: #555;
             margin-bottom: 20px;
             font-size: 1.05rem;
         }
 
-        .about-image {
-            background-color: #E8E2D5;
-            height: 400px;
-            border-radius: 8px;
+        .about-badge {
+            background: linear-gradient(135deg, var(--sunshine-yellow), var(--hot-pink));
+            height: 350px;
+            border-radius: 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             text-align: center;
             padding: 40px;
+            color: white;
+            border: 4px solid white;
+            box-shadow: 0 10px 25px rgba(255, 215, 0, 0.4);
         }
 
-        .about-image i {
-            font-size: 3.5rem;
-            color: var(--accent-botanical);
-            margin-bottom: 16px;
+        .about-badge i {
+            font-size: 4rem;
+            margin-bottom: 15px;
+            color: white;
         }
 
         /* Reviews Page Layout */
@@ -482,39 +464,46 @@
         }
 
         .review-card {
-            background: var(--surface-color);
-            border: 1px solid var(--border-color);
+            background: white;
+            border: 3px solid var(--sunshine-yellow);
             padding: 30px;
-            border-radius: 8px;
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(255, 215, 0, 0.2);
         }
 
         .review-stars {
-            color: var(--accent-gold);
+            color: var(--sunshine-yellow);
             margin-bottom: 15px;
-            font-size: 0.9rem;
+            font-size: 1.1rem;
         }
 
         .review-text {
             font-style: italic;
             font-size: 0.95rem;
             margin-bottom: 20px;
-            color: var(--text-main);
+            color: #444;
         }
 
         .review-author {
-            font-weight: 600;
-            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--hot-pink);
+            font-size: 0.95rem;
         }
 
         /* FAQ Page Layout */
         .faq-container {
-            max-width: 800px;
+            max-width: 850px;
             margin: 0 auto;
+            background: white;
+            padding: 50px;
+            border-radius: 30px;
+            border: 4px solid var(--electric-blue);
+            box-shadow: 0 10px 30px rgba(0, 191, 255, 0.2);
         }
 
         .faq-item {
-            border-bottom: 1px solid var(--border-color);
-            padding: 24px 0;
+            border-bottom: 2px dashed #eee;
+            padding: 20px 0;
             cursor: pointer;
         }
 
@@ -522,13 +511,14 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            font-size: 1.15rem;
-            font-weight: 600;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--hot-pink);
         }
 
         .faq-answer {
-            color: var(--text-muted);
-            margin-top: 12px;
+            color: #555;
+            margin-top: 10px;
             font-size: 0.95rem;
             display: none;
         }
@@ -537,7 +527,7 @@
             display: block;
         }
 
-        /* Contact & Wholesale Page Layout */
+        /* Contact Page Layout */
         .contact-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -545,64 +535,70 @@
         }
 
         .contact-box {
-            background-color: var(--surface-color);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
+            background: white;
+            border-radius: 30px;
             padding: 50px;
+            box-shadow: 0 10px 30px rgba(255, 20, 147, 0.2);
+            border: 4px solid var(--hot-pink);
         }
 
         .contact-box h2 {
             font-size: 2.2rem;
             margin-bottom: 15px;
-            font-style: italic;
+            color: var(--hot-pink);
         }
 
         .contact-box p {
-            color: var(--text-muted);
+            color: #555;
             margin-bottom: 25px;
-            font-size: 0.95rem;
         }
 
         .contact-form {
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 18px;
         }
 
         .form-group input, .form-group textarea, .form-group select {
             width: 100%;
             padding: 15px;
-            background-color: var(--bg-color);
-            border: 1px solid var(--border-color);
-            border-radius: 4px;
-            color: var(--text-main);
+            background-color: var(--bg-pink);
+            border: 2px solid #ddd;
+            border-radius: 12px;
+            color: var(--text-dark);
             font-family: inherit;
             font-size: 0.95rem;
+            font-weight: 500;
         }
 
         .form-group textarea {
-            height: 130px;
+            height: 120px;
             resize: vertical;
         }
 
         .form-group input:focus, .form-group textarea:focus, .form-group select:focus {
             outline: none;
-            border-color: var(--accent-botanical);
+            border-color: var(--hot-pink);
+            background-color: white;
         }
 
         .btn-submit {
-            background-color: var(--accent-botanical);
-            color: white;
+            background-color: var(--sunshine-yellow);
+            color: var(--text-dark);
             border: none;
             padding: 16px;
-            font-weight: 500;
-            border-radius: 4px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            border-radius: 50px;
             cursor: pointer;
             transition: var(--transition);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
 
         .btn-submit:hover {
-            background-color: #385144;
+            background-color: var(--hot-pink);
+            color: white;
+            transform: scale(1.02);
         }
 
         /* Cart Drawer */
@@ -612,12 +608,13 @@
             right: -450px;
             width: 420px;
             height: 100%;
-            background-color: var(--surface-color);
-            box-shadow: -10px 0 30px rgba(0,0,0,0.1);
+            background-color: white;
+            box-shadow: -10px 0 40px rgba(0,0,0,0.2);
             z-index: 2000;
-            transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            transition: right 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             display: flex;
             flex-direction: column;
+            border-left: 5px solid var(--hot-pink);
         }
 
         .cart-drawer.open {
@@ -626,17 +623,19 @@
 
         .cart-header {
             padding: 24px;
-            border-bottom: 1px solid var(--border-color);
+            border-bottom: 3px dashed var(--hot-pink);
             display: flex;
             justify-content: space-between;
             align-items: center;
+            background-color: var(--bg-pink);
         }
 
         .cart-close {
             background: none;
             border: none;
-            font-size: 1.2rem;
+            font-size: 1.4rem;
             cursor: pointer;
+            color: var(--hot-pink);
         }
 
         .cart-body {
@@ -650,20 +649,20 @@
             gap: 16px;
             margin-bottom: 20px;
             padding-bottom: 20px;
-            border-bottom: 1px solid var(--border-color);
+            border-bottom: 2px solid #eee;
             align-items: center;
         }
 
         .cart-item-icon {
             width: 60px;
             height: 60px;
-            background-color: #F4F1EA;
-            border-radius: 4px;
+            background: linear-gradient(135deg, var(--hot-pink), var(--electric-blue));
+            border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.2rem;
-            color: var(--accent-botanical);
+            font-size: 1.3rem;
+            color: white;
         }
 
         .cart-item-details {
@@ -671,56 +670,57 @@
         }
 
         .cart-item-title {
-            font-weight: 600;
+            font-weight: 700;
             font-size: 0.95rem;
             margin-bottom: 4px;
+            font-family: 'Fredoka', cursive;
         }
 
         .cart-item-price {
             font-size: 0.9rem;
-            color: var(--text-muted);
+            color: var(--hot-pink);
+            font-weight: 600;
         }
 
         .cart-item-remove {
             background: none;
             border: none;
-            color: #999;
-            cursor: pointer;
-            font-size: 0.85rem;
-        }
-
-        .cart-item-remove:hover {
             color: #ff3333;
+            cursor: pointer;
+            font-size: 1rem;
         }
 
         .cart-footer {
             padding: 24px;
-            border-top: 1px solid var(--border-color);
-            background-color: var(--bg-color);
+            border-top: 3px dashed var(--hot-pink);
+            background-color: var(--bg-pink);
         }
 
         .cart-total {
             display: flex;
             justify-content: space-between;
-            font-weight: 600;
-            font-size: 1.1rem;
+            font-weight: 700;
+            font-size: 1.2rem;
             margin-bottom: 20px;
+            color: var(--text-dark);
         }
 
         .btn-checkout {
             width: 100%;
-            background-color: var(--accent-botanical);
+            background: linear-gradient(45deg, var(--hot-pink), var(--purple-pop));
             color: white;
             border: none;
             padding: 16px;
-            border-radius: 4px;
-            font-weight: 500;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1rem;
             cursor: pointer;
             transition: var(--transition);
+            box-shadow: 0 5px 15px rgba(255, 20, 147, 0.4);
         }
 
         .btn-checkout:hover {
-            background-color: #385144;
+            transform: scale(1.02);
         }
 
         .overlay {
@@ -729,7 +729,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0,0,0,0.4);
+            background-color: rgba(0,0,0,0.5);
             z-index: 1500;
             opacity: 0;
             visibility: hidden;
@@ -747,17 +747,17 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%) scale(0.95);
-            background-color: var(--surface-color);
+            background-color: white;
             width: 90%;
             max-width: 800px;
-            border-radius: 12px;
-            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+            border-radius: 25px;
+            box-shadow: 0 25px 60px rgba(0,0,0,0.3);
             z-index: 2500;
             opacity: 0;
             visibility: hidden;
             transition: var(--transition);
             overflow: hidden;
-            border: 1px solid var(--border-color);
+            border: 5px solid var(--hot-pink);
         }
 
         .modal.open {
@@ -772,13 +772,14 @@
         }
 
         .modal-image {
-            background-color: #F4F1EA;
+            background: linear-gradient(135deg, var(--electric-blue), var(--purple-pop));
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            padding: 60px;
+            padding: 50px;
             text-align: center;
+            color: white;
         }
 
         .modal-details {
@@ -792,51 +793,68 @@
             position: absolute;
             top: 20px;
             right: 20px;
-            background: none;
-            border: none;
-            font-size: 1.2rem;
+            background: white;
+            border: 2px solid var(--hot-pink);
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            font-size: 1.1rem;
             cursor: pointer;
             z-index: 10;
+            color: var(--hot-pink);
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         /* Footer */
         footer {
-            border-top: 1px solid var(--border-color);
-            padding: 60px 40px;
-            background-color: var(--surface-color);
+            border-top: 5px solid var(--hot-pink);
+            padding: 50px 40px;
+            background-color: white;
+            text-align: center;
         }
 
         .footer-container {
             max-width: 1280px;
             margin: 0 auto;
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
             align-items: center;
+            gap: 20px;
         }
 
         .footer-links {
             display: flex;
             gap: 30px;
-            font-size: 0.9rem;
-            color: var(--text-muted);
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-dark);
         }
 
         .footer-links a:hover {
-            color: var(--text-main);
+            color: var(--hot-pink);
             cursor: pointer;
         }
 
         .copyright {
             font-size: 0.85rem;
-            color: var(--text-muted);
+            color: #777;
         }
 
         @media (max-width: 900px) {
-            .botanical-hero-frame { padding: 50px 20px; }
-            .botanical-hero-frame h1 { font-size: 2.8rem; }
-            .about-section, .contact-grid, .modal-content { grid-template-columns: 1fr; }
-            .nav-links { display: none; }
-            .reviews-grid { grid-template-columns: 1fr; }
+            .hero, .about-section, .contact-grid, .modal-content {
+                grid-template-columns: 1fr;
+            }
+            .hero-content h1 {
+                font-size: 2.8rem;
+            }
+            .nav-links {
+                display: none;
+            }
+            .reviews-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -844,7 +862,7 @@
 
     <!-- Announcement Bar -->
     <div class="announcement-bar">
-        🌿 Free US Shipping on orders over $35 | Explore our 8 published coloring books below!
+        🌈 ✨ FREE shipping on US orders over $35! Shop all 8 magical coloring books below! 💖
     </div>
 
     <!-- Navigation -->
@@ -857,7 +875,7 @@
                 <a onclick="switchPage('about')" id="nav-about">About</a>
                 <a onclick="switchPage('reviews')" id="nav-reviews">Reviews</a>
                 <a onclick="switchPage('faq')" id="nav-faq">FAQ</a>
-                <a onclick="switchPage('contact')" id="nav-contact">Contact & Wholesale</a>
+                <a onclick="switchPage('contact')" id="nav-contact">Contact</a>
             </nav>
             <div class="nav-actions">
                 <button class="cart-btn" id="cartToggleBtn">
@@ -868,20 +886,26 @@
         </div>
     </header>
 
-    <!-- PAGE 1: HOME (Johanna Basford Style Hero Frame) -->
+    <!-- PAGE 1: HOME -->
     <div id="page-home" class="page-view active">
-        <div class="botanical-hero-frame">
-            <div class="brand-subtitle">LXE Creative</div>
-            <div class="hero-welcome">Welcome to the</div>
-            <h1>Inky World</h1>
-            <div class="divider">of</div>
-            <h1>Angelica White</h1>
-            <button class="btn-botanical" onclick="switchPage('shop')">Browse My Books <i class="fa-solid fa-arrow-right"></i></button>
-        </div>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Spark Joy & Creativity in <span>Every Page!</span></h1>
+                <p>Welcome to LXE Creative by Angelica White! Discover vibrant, playful coloring books designed for kids' early learning and cozy adult relaxation.</p>
+                <div>
+                    <button class="btn-rainbow" onclick="switchPage('shop')">Shop Coloring Books <i class="fa-solid fa-sparkles"></i></button>
+                </div>
+            </div>
+            <div class="hero-banner-art">
+                <i class="fa-solid fa-book-open"></i>
+                <h3 style="font-family: 'Fredoka', cursive; font-size: 1.8rem; margin-bottom: 10px;">8 Published Books</h3>
+                <p>Buy Directly Here or on Amazon!</p>
+            </div>
+        </section>
 
         <div class="section-header">
-            <h2>Featured Books</h2>
-            <button class="btn-botanical" style="padding: 10px 24px; font-size: 0.9rem;" onclick="switchPage('shop')">View All Books</button>
+            <h2>Featured Magic Books</h2>
+            <button class="btn-rainbow" style="padding: 10px 24px; font-size: 0.95rem;" onclick="switchPage('shop')">View All Books</button>
         </div>
         <div class="products-grid" id="homeProductsGrid">
             <!-- Populated via JS -->
@@ -891,10 +915,10 @@
     <!-- PAGE 2: SHOP -->
     <div id="page-shop" class="page-view">
         <div class="section-header">
-            <h2>The Book Collection</h2>
+            <h2>Magic Book Collection</h2>
             <div class="filter-buttons">
                 <button class="filter-btn active" data-filter="all">All Books</button>
-                <button class="filter-btn" data-filter="kids">Kids (Ages 3-8)</button>
+                <button class="filter-btn" data-filter="kids">Kids (3-8)</button>
                 <button class="filter-btn" data-filter="adult">Adult & Puzzles</button>
             </div>
         </div>
@@ -907,15 +931,15 @@
     <div id="page-about" class="page-view">
         <div class="about-section">
             <div class="about-text">
-                <h2>Designed with Purpose & Passion</h2>
-                <p>LXE Creative was founded by Angelica White with a simple mission: to blend education, relaxation, and artistic expression into books that engage every member of the family.</p>
-                <p>From social-emotional learning tools like <em>A-Z Feelings</em> to mindful coloring escapes like <em>Unavailable by Choice</em>, every title is meticulously crafted to inspire joy, creativity, and calm.</p>
-                <button class="btn-botanical" style="margin-top: 10px;" onclick="switchPage('shop')">Shop All Books</button>
+                <h2>Created with Love & Fun!</h2>
+                <p>LXE Creative was founded by Angelica White to bring vibrant educational tools and joyful coloring experiences to families and creative souls everywhere.</p>
+                <p>From social-emotional kids' books like <em>A-Z Feelings</em> to relaxing adult puzzle escapes like <em>Unavailable by Choice</em>, every book is packed with charm, educational value, and imagination.</p>
+                <button class="btn-rainbow" style="margin-top: 10px;" onclick="switchPage('shop')">Shop All Titles</button>
             </div>
-            <div class="about-image">
-                <i class="fa-solid fa-feather"></i>
-                <h3 style="font-family: 'Playfair Display', serif; font-size: 1.5rem;">Angelica White</h3>
-                <p style="color: var(--text-muted); font-size: 0.9rem;">Author & Creator</p>
+            <div class="about-badge">
+                <i class="fa-solid fa-crown"></i>
+                <h3 style="font-family: 'Fredoka', cursive; font-size: 1.6rem;">Angelica White</h3>
+                <p style="font-size: 0.95rem; margin-top: 5px;">Author & Creator</p>
             </div>
         </div>
     </div>
@@ -923,28 +947,28 @@
     <!-- PAGE 4: REVIEWS -->
     <div id="page-reviews" class="page-view">
         <div class="section-header">
-            <h2>Loved by Readers & Parents</h2>
+            <h2>Loved by Readers & Educators!</h2>
         </div>
         <div class="reviews-grid">
             <div class="review-card">
                 <div class="review-stars">
                     <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                 </div>
-                <p class="review-text">"A-Z Feelings has been an incredible tool in our homeschool routine. My 5-year-old daughter loves coloring the pages while we talk about emotions."</p>
+                <p class="review-text">"A-Z Feelings is an absolute game-changer for our homeschool routine. My 5-year-old daughter loves coloring every single page!"</p>
                 <div class="review-author">— Sarah M., Parent</div>
             </div>
             <div class="review-card">
                 <div class="review-stars">
                     <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                 </div>
-                <p class="review-text">"Unavailable by Choice is my absolute favorite evening unwind ritual. The designs are cozy, intricate, and truly help quiet the mind after work."</p>
+                <p class="review-text">"Unavailable by Choice is my favorite evening unwind ritual. The designs are so cozy and help me destress completely after work."</p>
                 <div class="review-author">— Jessica L., Verified Buyer</div>
             </div>
             <div class="review-card">
                 <div class="review-stars">
                     <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                 </div>
-                <p class="review-text">"Spot-tastic Adventures is a huge hit in our house! High-quality pages and delightful dalmatian artwork that keeps the kids entertained for hours."</p>
+                <p class="review-text">"Spot-tastic Adventures is a huge hit in our house! Wonderful quality and adorable dalmatian artwork that keeps kids entertained."</p>
                 <div class="review-author">— David K., Educator</div>
             </div>
         </div>
@@ -953,29 +977,29 @@
     <!-- PAGE 5: FAQ -->
     <div id="page-faq" class="page-view">
         <div class="faq-container">
-            <div class="section-header" style="justify-content: center; margin-bottom: 30px;">
-                <h2>Frequently Asked Questions</h2>
+            <div class="section-header" style="border-bottom: 3px dashed var(--electric-blue); margin-bottom: 30px;">
+                <h2 style="color: var(--electric-blue);">Frequently Asked Questions</h2>
             </div>
             <div class="faq-item" onclick="toggleFaq(this)">
                 <div class="faq-question">
-                    <span>What age group are the children's books designed for?</span>
+                    <span>What age group are the children's books for?</span>
                     <i class="fa-solid fa-chevron-down"></i>
                 </div>
-                <div class="faq-answer">Our educational children's books (such as the A-Z series) are specifically designed for children ages 3 to 8, featuring bold outlines, engaging characters, and developmental learning prompts.</div>
+                <div class="faq-answer">Our educational children's coloring books (like the A-Z series) are designed for children ages 3 to 8, featuring bold lines and engaging developmental concepts.</div>
             </div>
             <div class="faq-item" onclick="toggleFaq(this)">
                 <div class="faq-question">
-                    <span>Can I purchase these books on Amazon as well?</span>
+                    <span>Can I buy these books on Amazon as well?</span>
                     <i class="fa-solid fa-chevron-down"></i>
                 </div>
-                <div class="faq-answer">Yes! All 8 coloring books are available for purchase directly here on our website or through Amazon via the "Buy on Amazon" button on each book.</div>
+                <div class="faq-answer">Yes! You can purchase directly right here on our website or click the Amazon button on any book to order through Amazon.</div>
             </div>
             <div class="faq-item" onclick="toggleFaq(this)">
                 <div class="faq-question">
-                    <span>What are your shipping and fulfillment times?</span>
+                    <span>How do direct website orders ship?</span>
                     <i class="fa-solid fa-chevron-down"></i>
                 </div>
-                <div class="faq-answer">Direct website orders are packaged with care and shipped within 1–3 business days. You will receive an automated tracking notification as soon as your order leaves our studio.</div>
+                <div class="faq-answer">Direct website orders are packaged with care and shipped within 1–3 business days with automated tracking notifications sent straight to your email.</div>
             </div>
         </div>
     </div>
@@ -983,10 +1007,10 @@
     <!-- PAGE 6: CONTACT & WHOLESALE -->
     <div id="page-contact" class="page-view">
         <div class="contact-grid">
-            <!-- General Contact Box -->
+            <!-- General Contact Form -->
             <div class="contact-box">
                 <h2>General Inquiries</h2>
-                <p>Have questions about your order, shipping, or our books? Send us a message and we'll get back to you shortly.</p>
+                <p>Have questions about your order or our books? Send us a message!</p>
                 <form class="contact-form" onsubmit="handleGeneralContact(event)">
                     <div class="form-group">
                         <input type="text" placeholder="Your Name" required>
@@ -995,16 +1019,16 @@
                         <input type="email" placeholder="Your Email Address" required>
                     </div>
                     <div class="form-group">
-                        <textarea placeholder="How can we help you?" required></textarea>
+                        <textarea placeholder="Your Message..." required></textarea>
                     </div>
-                    <button type="submit" class="btn-submit">Send Message</button>
+                    <button type="submit" class="btn-submit">Send Message ✨</button>
                 </form>
             </div>
 
-            <!-- Wholesale Inquiry Box -->
-            <div class="contact-box">
-                <h2>Wholesale Inquiries</h2>
-                <p>Interested in stocking LXE Creative books at your boutique, bookstore, or school? Fill out our wholesale application below.</p>
+            <!-- Wholesale Inquiry Form -->
+            <div class="contact-box" style="border-color: var(--electric-blue);">
+                <h2 style="color: var(--electric-blue);">Wholesale Inquiries</h2>
+                <p>Interested in stocking LXE Creative books at your boutique, bookstore, or school? Apply for wholesale pricing here!</p>
                 <form class="contact-form" onsubmit="handleWholesaleContact(event)">
                     <div class="form-group">
                         <input type="text" placeholder="Business / Store Name" required>
@@ -1026,7 +1050,7 @@
                     <div class="form-group">
                         <textarea placeholder="Tell us about your store or organization..." required></textarea>
                     </div>
-                    <button type="submit" class="btn-submit">Submit Wholesale Application</button>
+                    <button type="submit" class="btn-submit" style="background-color: var(--electric-blue); color: white;">Submit Wholesale Application 📦</button>
                 </form>
             </div>
         </div>
@@ -1054,7 +1078,7 @@
     <div class="overlay" id="overlay"></div>
     <div class="cart-drawer" id="cartDrawer">
         <div class="cart-header">
-            <h3>Your Shopping Bag</h3>
+            <h3 style="font-family: 'Fredoka', cursive; color: var(--hot-pink);">Your Shopping Bag 🛍️</h3>
             <button class="cart-close" id="cartCloseBtn"><i class="fa-solid fa-xmark"></i></button>
         </div>
         <div class="cart-body" id="cartBody">
@@ -1065,7 +1089,7 @@
                 <span>Subtotal:</span>
                 <span id="cartSubtotal">$0.00</span>
             </div>
-            <button class="btn-checkout" onclick="alert('Proceeding to secure checkout...')">Proceed to Checkout</button>
+            <button class="btn-checkout" onclick="alert('Proceeding to secure checkout...')">Proceed to Checkout ✨</button>
         </div>
     </div>
 
@@ -1160,7 +1184,7 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        // Render Products
+        // Render Product Cards
         function renderProducts(gridId, filter = 'all') {
             const grid = document.getElementById(gridId);
             if (!grid) return;
@@ -1168,7 +1192,7 @@
             
             let filtered = products;
             if (gridId === 'homeProductsGrid') {
-                filtered = products.slice(0, 4);
+                filtered = products.slice(0, 4); // show first 4 on home
             } else if (filter !== 'all') {
                 filtered = products.filter(p => p.category === filter);
             }
@@ -1179,7 +1203,7 @@
                 card.innerHTML = `
                     <div class="product-thumb" onclick="openModal(${product.id})">
                         <i class="fa-solid fa-book"></i>
-                        <span>LXE Creative</span>
+                        <span style="font-family:'Fredoka',cursive; font-size:0.8rem; font-weight:700; color:var(--hot-pink);">LXE Creative</span>
                     </div>
                     <div class="product-info">
                         <div class="product-category">${product.category === 'kids' ? 'Kids (Ages 3-8)' : 'Adult & Puzzles'}</div>
@@ -1198,7 +1222,7 @@
             });
         }
 
-        // Shop Filters
+        // Shop Category Filters
         document.querySelectorAll('.filter-btn').forEach(btn => {
             btn.addEventListener('click', (e) => {
                 document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
@@ -1207,7 +1231,7 @@
             });
         });
 
-        // Cart Management
+        // Cart Functions
         function addToCart(productId) {
             const product = products.find(p => p.id === productId);
             const existing = cart.find(item => item.id === productId);
@@ -1230,7 +1254,7 @@
             const cartBody = document.getElementById('cartBody');
             
             if (cart.length === 0) {
-                cartBody.innerHTML = `<p style="color: var(--text-muted); text-align: center; padding: 40px 0;">Your shopping bag is empty.</p>`;
+                cartBody.innerHTML = `<p style="color: #777; text-align: center; padding: 40px 0;">Your shopping bag is empty.</p>`;
                 document.getElementById('cartSubtotal').textContent = '$0.00';
                 return;
             }
@@ -1273,24 +1297,24 @@
             closeModal();
         });
 
-        // Modal Management
+        // Modal Functions
         function openModal(productId) {
             const product = products.find(p => p.id === productId);
             document.getElementById('modalContent').innerHTML = `
                 <div class="modal-image">
-                    <i class="fa-solid fa-book-open" style="font-size: 5rem; color: var(--accent-botanical); margin-bottom: 20px;"></i>
-                    <span style="font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted);">LXE Creative Studio</span>
+                    <i class="fa-solid fa-book-open" style="font-size: 5rem; margin-bottom: 20px; color: var(--sunshine-yellow);"></i>
+                    <h3 style="font-family:'Fredoka',cursive; font-size:1.4rem;">LXE Creative Studio</h3>
                 </div>
                 <div class="modal-details">
                     <div>
                         <span class="product-category">${product.category === 'kids' ? 'Kids (Ages 3-8)' : 'Adult & Puzzles'}</span>
-                        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.8rem; margin: 10px 0 15px;">${product.title}</h2>
-                        <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 25px; line-height: 1.6;">${product.description}</p>
-                        <div style="font-size: 1.5rem; font-weight: 600; margin-bottom: 25px;">$${product.price.toFixed(2)}</div>
+                        <h2 style="font-family: 'Fredoka', cursive; font-size: 1.6rem; margin: 10px 0 15px; color: var(--hot-pink);">${product.title}</h2>
+                        <p style="color: #555; font-size: 0.95rem; margin-bottom: 25px; line-height: 1.6;">${product.description}</p>
+                        <div style="font-size: 1.5rem; font-weight: 700; margin-bottom: 25px; color: var(--hot-pink);">$${product.price.toFixed(2)}</div>
                     </div>
                     <div style="display: flex; gap: 12px; flex-direction: column;">
-                        <button class="btn-botanical" onclick="addToCart(${product.id}); closeModal();" style="justify-content: center; border-radius: 4px;">Add to Website Cart</button>
-                        <a href="${product.amazonUrl}" target="_blank" class="btn-botanical" style="justify-content: center; border-radius: 4px; background-color: #FF9900; color: #111; font-weight: 600;"><i class="fa-brands fa-amazon"></i> Buy on Amazon</a>
+                        <button class="btn-rainbow" onclick="addToCart(${product.id}); closeModal();" style="justify-content: center; width: 100%; border-radius: 12px;">Add to Website Cart</button>
+                        <a href="${product.amazonUrl}" target="_blank" class="btn-rainbow" style="justify-content: center; width: 100%; border-radius: 12px; background: #FF9900; box-shadow: 0 5px 15px rgba(255,153,0,0.4);"><i class="fa-brands fa-amazon"></i> Buy on Amazon</a>
                     </div>
                 </div>
             `;
@@ -1310,16 +1334,16 @@
             item.classList.toggle('active');
         }
 
-        // Contact Handlers
+        // Contact Form Handlers
         function handleGeneralContact(e) {
             e.preventDefault();
-            alert('Thank you for your message! Angelica will get back to you shortly.');
+            alert('Thank you for your message! Angelica will get back to you shortly. ✨');
             e.target.reset();
         }
 
         function handleWholesaleContact(e) {
             e.preventDefault();
-            alert('Thank you for your wholesale inquiry! Our team will review your application and contact you within 2 business days.');
+            alert('Thank you for your wholesale inquiry! Our team will review your application and contact you within 2 business days. 📦✨');
             e.target.reset();
         }
 
@@ -1329,4 +1353,3 @@
     </script>
 </body>
 </html>
-```[cite: 1, 2, 3, 4, 5, 6, 7, 8]
