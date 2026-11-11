@@ -1,0 +1,1332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LXE Creative | Coloring Books by Angelica White</title>
+    <!-- Google Fonts for Botanical Hand-Drawn Editorial Elegance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --bg-color: #FDFBF7;
+            --surface-color: #FFFFFF;
+            --card-bg: #FFFFFF;
+            --text-main: #3E352B;
+            --text-muted: #7E746A;
+            --accent-botanical: #4A6B5B;
+            --accent-gold: #C5A059;
+            --border-color: #E8E2D5;
+            --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, .serif-font {
+            font-family: 'Playfair Display', serif;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Announcement Bar */
+        .announcement-bar {
+            background-color: var(--accent-botanical);
+            color: #F5F5F5;
+            text-align: center;
+            font-size: 0.85rem;
+            padding: 10px 16px;
+            letter-spacing: 0.05em;
+        }
+
+        /* Navigation */
+        header {
+            position: sticky;
+            top: 0;
+            background-color: rgba(253, 251, 247, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 20px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: var(--text-main);
+            cursor: pointer;
+            font-style: italic;
+        }
+
+        .logo span {
+            color: var(--accent-botanical);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        .nav-links a {
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--accent-botanical);
+        }
+
+        .cart-btn {
+            background: none;
+            border: none;
+            font-size: 1.1rem;
+            cursor: pointer;
+            position: relative;
+            color: var(--text-main);
+            transition: var(--transition);
+        }
+
+        .cart-btn:hover {
+            color: var(--accent-botanical);
+        }
+
+        .cart-badge {
+            position: absolute;
+            top: -8px;
+            right: -10px;
+            background-color: var(--accent-botanical);
+            color: white;
+            font-size: 0.7rem;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+        }
+
+        /* Page Views Container */
+        .page-view {
+            display: none;
+            max-width: 1280px;
+            margin: 40px auto 80px;
+            padding: 0 40px;
+        }
+
+        .page-view.active {
+            display: block;
+        }
+
+        /* Johanna Basford Style Hero Frame */
+        .botanical-hero-frame {
+            position: relative;
+            background-color: #F6F3EC;
+            border: 2px solid var(--border-color);
+            border-radius: 16px;
+            padding: 100px 60px;
+            text-align: center;
+            margin-bottom: 80px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.03);
+            overflow: hidden;
+        }
+
+        .botanical-hero-frame::before,
+        .botanical-hero-frame::after {
+            content: "";
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            opacity: 0.35;
+            pointer-events: none;
+        }
+
+        .botanical-hero-frame::before {
+            top: 20px;
+            left: 20px;
+            border-top: 3px solid var(--accent-botanical);
+            border-left: 3px solid var(--accent-botanical);
+            border-top-left-radius: 20px;
+        }
+
+        .botanical-hero-frame::after {
+            bottom: 20px;
+            right: 20px;
+            border-bottom: 3px solid var(--accent-botanical);
+            border-right: 3px solid var(--accent-botanical);
+            border-bottom-right-radius: 20px;
+        }
+
+        .brand-subtitle {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 16px;
+            font-style: italic;
+        }
+
+        .hero-welcome {
+            font-size: 1.4rem;
+            font-weight: 400;
+            color: var(--text-muted);
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+
+        .botanical-hero-frame h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 30px;
+            font-style: italic;
+            letter-spacing: -0.02em;
+        }
+
+        .botanical-hero-frame .divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            color: var(--text-muted);
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+
+        .botanical-hero-frame .divider::before,
+        .botanical-hero-frame .divider::after {
+            content: "";
+            height: 1px;
+            width: 80px;
+            background-color: var(--border-color);
+        }
+
+        .btn-botanical {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background-color: var(--accent-botanical);
+            color: white;
+            padding: 16px 38px;
+            border-radius: 30px;
+            font-weight: 500;
+            font-size: 1rem;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+            letter-spacing: 0.05em;
+            box-shadow: 0 4px 15px rgba(74, 107, 91, 0.2);
+        }
+
+        .btn-botanical:hover {
+            background-color: #385144;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(74, 107, 91, 0.3);
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 40px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 20px;
+        }
+
+        .section-header h2 {
+            font-size: 2.2rem;
+            font-weight: 600;
+            font-style: italic;
+        }
+
+        /* Filter Buttons */
+        .filter-buttons {
+            display: flex;
+            gap: 12px;
+        }
+
+        .filter-btn {
+            background: none;
+            border: 1px solid var(--border-color);
+            padding: 8px 18px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .filter-btn.active, .filter-btn:hover {
+            background-color: var(--accent-botanical);
+            color: white;
+            border-color: var(--accent-botanical);
+        }
+
+        /* Products Grid */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .product-card {
+            background-color: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.05);
+        }
+
+        .product-thumb {
+            height: 280px;
+            background-color: #F4F1EA;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            cursor: pointer;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .product-thumb i {
+            font-size: 2.5rem;
+            color: var(--accent-botanical);
+            margin-bottom: 12px;
+        }
+
+        .product-thumb span {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        .product-info {
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .product-category {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .product-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            line-height: 1.3;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .product-title:hover {
+            color: var(--accent-botanical);
+        }
+
+        .product-description {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .product-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: auto;
+            padding-top: 16px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .product-price {
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .card-actions {
+            display: flex;
+            gap: 8px;
+        }
+
+        .btn-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition);
+            color: var(--text-main);
+        }
+
+        .btn-icon:hover {
+            background-color: var(--accent-botanical);
+            color: white;
+            border-color: var(--accent-botanical);
+        }
+
+        .btn-amazon {
+            background-color: #FF9900;
+            border-color: #FF9900;
+            color: #111;
+        }
+
+        .btn-amazon:hover {
+            background-color: #e88b00;
+            border-color: #e88b00;
+            color: #111;
+        }
+
+        /* About Page Layout */
+        .about-section {
+            background-color: #F4F1EA;
+            border-radius: 12px;
+            padding: 80px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            border: 1px solid var(--border-color);
+        }
+
+        .about-text h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .about-text p {
+            color: var(--text-muted);
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+        }
+
+        .about-image {
+            background-color: #E8E2D5;
+            height: 400px;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .about-image i {
+            font-size: 3.5rem;
+            color: var(--accent-botanical);
+            margin-bottom: 16px;
+        }
+
+        /* Reviews Page Layout */
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .review-card {
+            background: var(--surface-color);
+            border: 1px solid var(--border-color);
+            padding: 30px;
+            border-radius: 8px;
+        }
+
+        .review-stars {
+            color: var(--accent-gold);
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+        }
+
+        .review-text {
+            font-style: italic;
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+            color: var(--text-main);
+        }
+
+        .review-author {
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        /* FAQ Page Layout */
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--border-color);
+            padding: 24px 0;
+            cursor: pointer;
+        }
+
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1.15rem;
+            font-weight: 600;
+        }
+
+        .faq-answer {
+            color: var(--text-muted);
+            margin-top: 12px;
+            font-size: 0.95rem;
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        /* Contact & Wholesale Page Layout */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .contact-box {
+            background-color: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 50px;
+        }
+
+        .contact-box h2 {
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+
+        .contact-box p {
+            color: var(--text-muted);
+            margin-bottom: 25px;
+            font-size: 0.95rem;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .form-group input, .form-group textarea, .form-group select {
+            width: 100%;
+            padding: 15px;
+            background-color: var(--bg-color);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            color: var(--text-main);
+            font-family: inherit;
+            font-size: 0.95rem;
+        }
+
+        .form-group textarea {
+            height: 130px;
+            resize: vertical;
+        }
+
+        .form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+            outline: none;
+            border-color: var(--accent-botanical);
+        }
+
+        .btn-submit {
+            background-color: var(--accent-botanical);
+            color: white;
+            border: none;
+            padding: 16px;
+            font-weight: 500;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .btn-submit:hover {
+            background-color: #385144;
+        }
+
+        /* Cart Drawer */
+        .cart-drawer {
+            position: fixed;
+            top: 0;
+            right: -450px;
+            width: 420px;
+            height: 100%;
+            background-color: var(--surface-color);
+            box-shadow: -10px 0 30px rgba(0,0,0,0.1);
+            z-index: 2000;
+            transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .cart-drawer.open {
+            right: 0;
+        }
+
+        .cart-header {
+            padding: 24px;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .cart-close {
+            background: none;
+            border: none;
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+
+        .cart-body {
+            padding: 24px;
+            flex-grow: 1;
+            overflow-y: auto;
+        }
+
+        .cart-item {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border-color);
+            align-items: center;
+        }
+
+        .cart-item-icon {
+            width: 60px;
+            height: 60px;
+            background-color: #F4F1EA;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: var(--accent-botanical);
+        }
+
+        .cart-item-details {
+            flex-grow: 1;
+        }
+
+        .cart-item-title {
+            font-weight: 600;
+            font-size: 0.95rem;
+            margin-bottom: 4px;
+        }
+
+        .cart-item-price {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .cart-item-remove {
+            background: none;
+            border: none;
+            color: #999;
+            cursor: pointer;
+            font-size: 0.85rem;
+        }
+
+        .cart-item-remove:hover {
+            color: #ff3333;
+        }
+
+        .cart-footer {
+            padding: 24px;
+            border-top: 1px solid var(--border-color);
+            background-color: var(--bg-color);
+        }
+
+        .cart-total {
+            display: flex;
+            justify-content: space-between;
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        .btn-checkout {
+            width: 100%;
+            background-color: var(--accent-botanical);
+            color: white;
+            border: none;
+            padding: 16px;
+            border-radius: 4px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .btn-checkout:hover {
+            background-color: #385144;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.4);
+            z-index: 1500;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+        }
+
+        .overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Product Modal */
+        .modal {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0.95);
+            background-color: var(--surface-color);
+            width: 90%;
+            max-width: 800px;
+            border-radius: 12px;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+            z-index: 2500;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+        }
+
+        .modal.open {
+            opacity: 1;
+            visibility: visible;
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        .modal-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .modal-image {
+            background-color: #F4F1EA;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 60px;
+            text-align: center;
+        }
+
+        .modal-details {
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            font-size: 1.2rem;
+            cursor: pointer;
+            z-index: 10;
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid var(--border-color);
+            padding: 60px 40px;
+            background-color: var(--surface-color);
+        }
+
+        .footer-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 30px;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .footer-links a:hover {
+            color: var(--text-main);
+            cursor: pointer;
+        }
+
+        .copyright {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        @media (max-width: 900px) {
+            .botanical-hero-frame { padding: 50px 20px; }
+            .botanical-hero-frame h1 { font-size: 2.8rem; }
+            .about-section, .contact-grid, .modal-content { grid-template-columns: 1fr; }
+            .nav-links { display: none; }
+            .reviews-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        🌿 Free US Shipping on orders over $35 | Explore our 8 published coloring books below!
+    </div>
+
+    <!-- Navigation -->
+    <header>
+        <div class="nav-container">
+            <div class="logo" onclick="switchPage('home')">LXE <span>Creative</span></div>
+            <nav class="nav-links">
+                <a onclick="switchPage('home')" id="nav-home" class="active">Home</a>
+                <a onclick="switchPage('shop')" id="nav-shop">Shop</a>
+                <a onclick="switchPage('about')" id="nav-about">About</a>
+                <a onclick="switchPage('reviews')" id="nav-reviews">Reviews</a>
+                <a onclick="switchPage('faq')" id="nav-faq">FAQ</a>
+                <a onclick="switchPage('contact')" id="nav-contact">Contact & Wholesale</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="cart-btn" id="cartToggleBtn">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="cart-badge" id="cartCount">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- PAGE 1: HOME (Johanna Basford Style Hero Frame) -->
+    <div id="page-home" class="page-view active">
+        <div class="botanical-hero-frame">
+            <div class="brand-subtitle">LXE Creative</div>
+            <div class="hero-welcome">Welcome to the</div>
+            <h1>Inky World</h1>
+            <div class="divider">of</div>
+            <h1>Angelica White</h1>
+            <button class="btn-botanical" onclick="switchPage('shop')">Browse My Books <i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+
+        <div class="section-header">
+            <h2>Featured Books</h2>
+            <button class="btn-botanical" style="padding: 10px 24px; font-size: 0.9rem;" onclick="switchPage('shop')">View All Books</button>
+        </div>
+        <div class="products-grid" id="homeProductsGrid">
+            <!-- Populated via JS -->
+        </div>
+    </div>
+
+    <!-- PAGE 2: SHOP -->
+    <div id="page-shop" class="page-view">
+        <div class="section-header">
+            <h2>The Book Collection</h2>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All Books</button>
+                <button class="filter-btn" data-filter="kids">Kids (Ages 3-8)</button>
+                <button class="filter-btn" data-filter="adult">Adult & Puzzles</button>
+            </div>
+        </div>
+        <div class="products-grid" id="shopProductsGrid">
+            <!-- Populated via JS -->
+        </div>
+    </div>
+
+    <!-- PAGE 3: ABOUT -->
+    <div id="page-about" class="page-view">
+        <div class="about-section">
+            <div class="about-text">
+                <h2>Designed with Purpose & Passion</h2>
+                <p>LXE Creative was founded by Angelica White with a simple mission: to blend education, relaxation, and artistic expression into books that engage every member of the family.</p>
+                <p>From social-emotional learning tools like <em>A-Z Feelings</em> to mindful coloring escapes like <em>Unavailable by Choice</em>, every title is meticulously crafted to inspire joy, creativity, and calm.</p>
+                <button class="btn-botanical" style="margin-top: 10px;" onclick="switchPage('shop')">Shop All Books</button>
+            </div>
+            <div class="about-image">
+                <i class="fa-solid fa-feather"></i>
+                <h3 style="font-family: 'Playfair Display', serif; font-size: 1.5rem;">Angelica White</h3>
+                <p style="color: var(--text-muted); font-size: 0.9rem;">Author & Creator</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE 4: REVIEWS -->
+    <div id="page-reviews" class="page-view">
+        <div class="section-header">
+            <h2>Loved by Readers & Parents</h2>
+        </div>
+        <div class="reviews-grid">
+            <div class="review-card">
+                <div class="review-stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="review-text">"A-Z Feelings has been an incredible tool in our homeschool routine. My 5-year-old daughter loves coloring the pages while we talk about emotions."</p>
+                <div class="review-author">— Sarah M., Parent</div>
+            </div>
+            <div class="review-card">
+                <div class="review-stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="review-text">"Unavailable by Choice is my absolute favorite evening unwind ritual. The designs are cozy, intricate, and truly help quiet the mind after work."</p>
+                <div class="review-author">— Jessica L., Verified Buyer</div>
+            </div>
+            <div class="review-card">
+                <div class="review-stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="review-text">"Spot-tastic Adventures is a huge hit in our house! High-quality pages and delightful dalmatian artwork that keeps the kids entertained for hours."</p>
+                <div class="review-author">— David K., Educator</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE 5: FAQ -->
+    <div id="page-faq" class="page-view">
+        <div class="faq-container">
+            <div class="section-header" style="justify-content: center; margin-bottom: 30px;">
+                <h2>Frequently Asked Questions</h2>
+            </div>
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-question">
+                    <span>What age group are the children's books designed for?</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">Our educational children's books (such as the A-Z series) are specifically designed for children ages 3 to 8, featuring bold outlines, engaging characters, and developmental learning prompts.</div>
+            </div>
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-question">
+                    <span>Can I purchase these books on Amazon as well?</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">Yes! All 8 coloring books are available for purchase directly here on our website or through Amazon via the "Buy on Amazon" button on each book.</div>
+            </div>
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-question">
+                    <span>What are your shipping and fulfillment times?</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">Direct website orders are packaged with care and shipped within 1–3 business days. You will receive an automated tracking notification as soon as your order leaves our studio.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE 6: CONTACT & WHOLESALE -->
+    <div id="page-contact" class="page-view">
+        <div class="contact-grid">
+            <!-- General Contact Box -->
+            <div class="contact-box">
+                <h2>General Inquiries</h2>
+                <p>Have questions about your order, shipping, or our books? Send us a message and we'll get back to you shortly.</p>
+                <form class="contact-form" onsubmit="handleGeneralContact(event)">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email Address" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="How can we help you?" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">Send Message</button>
+                </form>
+            </div>
+
+            <!-- Wholesale Inquiry Box -->
+            <div class="contact-box">
+                <h2>Wholesale Inquiries</h2>
+                <p>Interested in stocking LXE Creative books at your boutique, bookstore, or school? Fill out our wholesale application below.</p>
+                <form class="contact-form" onsubmit="handleWholesaleContact(event)">
+                    <div class="form-group">
+                        <input type="text" placeholder="Business / Store Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Contact Person Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Business Email Address" required>
+                    </div>
+                    <div class="form-group">
+                        <select required>
+                            <option value="" disabled selected>Estimated Order Quantity</option>
+                            <option value="25-50">25 – 50 copies</option>
+                            <option value="50-100">50 – 100 copies</option>
+                            <option value="100+">100+ copies</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Tell us about your store or organization..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">Submit Wholesale Application</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="logo" onclick="switchPage('home')">LXE <span>Creative</span></div>
+            <div class="footer-links">
+                <a onclick="switchPage('home')">Home</a>
+                <a onclick="switchPage('shop')">Shop</a>
+                <a onclick="switchPage('about')">About</a>
+                <a onclick="switchPage('reviews')">Reviews</a>
+                <a onclick="switchPage('faq')">FAQ</a>
+                <a onclick="switchPage('contact')">Contact & Wholesale</a>
+            </div>
+            <div class="copyright">
+                &copy; 2026 LXE Creative by Angelica White. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Drawer -->
+    <div class="overlay" id="overlay"></div>
+    <div class="cart-drawer" id="cartDrawer">
+        <div class="cart-header">
+            <h3>Your Shopping Bag</h3>
+            <button class="cart-close" id="cartCloseBtn"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="cart-body" id="cartBody">
+            <!-- Populated dynamically -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Subtotal:</span>
+                <span id="cartSubtotal">$0.00</span>
+            </div>
+            <button class="btn-checkout" onclick="alert('Proceeding to secure checkout...')">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <!-- Product Modal -->
+    <div class="modal" id="productModal">
+        <button class="modal-close" id="modalCloseBtn"><i class="fa-solid fa-xmark"></i></button>
+        <div class="modal-content" id="modalContent">
+            <!-- Populated via JS -->
+        </div>
+    </div>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+        const products = [
+            {
+                id: 1,
+                title: "A-Z Feelings: Color and learn emotions for kids",
+                category: "kids",
+                price: 9.99,
+                description: "An engaging emotional literacy coloring book helping children ages 3-8 identify and express their daily feelings.",
+                amazonUrl: "https://amazon.com"
+            },
+            {
+                id: 2,
+                title: "A-Z Manners: Color & Learn Manners for kids",
+                category: "kids",
+                price: 9.99,
+                description: "Fun illustrations and polite scenarios teaching essential social graces and everyday manners for growing kids.",
+                amazonUrl: "https://amazon.com"
+            },
+            {
+                id: 3,
+                title: "A-Z Community: Color & Learn Community Helpers",
+                category: "kids",
+                price: 11.99,
+                description: "Introduce little ones to the everyday heroes and community helpers who keep our neighborhoods safe and thriving.",
+                amazonUrl: "https://amazon.com"
+            },
+            {
+                id: 4,
+                title: "Can I Leave Early?: An Interactive Office Puzzle Book",
+                category: "adult",
+                price: 13.99,
+                description: "A hilarious and relaxing puzzle and coloring book designed for anyone who has ever survived a long day at the office.",
+                amazonUrl: "https://amazon.com"
+            },
+            {
+                id: 5,
+                title: "Unavailable by Choice: A Cozy Self-Care Coloring Book",
+                category: "adult",
+                price: 12.99,
+                description: "Unwind and disconnect with cozy, grounding illustrations created specifically for peaceful adult relaxation and stress relief.",
+                amazonUrl: "https://amazon.com"
+            },
+            {
+                id: 6,
+                title: "A-Z Bible Characters: Who Am I? Coloring & Activity",
+                category: "kids",
+                price: 11.99,
+                description: "Interactive coloring pages and guessing games exploring timeless Bible characters and foundational lessons.",
+                amazonUrl: "https://amazon.com"
+            },
+            {
+                id: 7,
+                title: "1,2,3... SWEETS! Coloring & Counting Book",
+                category: "kids",
+                price: 9.99,
+                description: "Sweet treats and delightful counting exercises designed to make early math fun and engaging for young learners.",
+                amazonUrl: "https://amazon.com"
+            },
+            {
+                id: 8,
+                title: "Spot-tastic Adventures: Dalmatian Coloring Book",
+                category: "kids",
+                price: 10.99,
+                description: "Join playful dalmatian pups on exciting adventures across imaginative worlds in this charming children's coloring book.",
+                amazonUrl: "https://amazon.com"
+            }
+        ];
+
+        let cart = [];
+
+        // Page Routing
+        function switchPage(pageId) {
+            document.querySelectorAll('.page-view').forEach(page => page.classList.remove('active'));
+            document.querySelectorAll('.nav-links a').forEach(link => link.classList.remove('active'));
+            
+            document.getElementById('page-' + pageId).classList.add('active');
+            const navLink = document.getElementById('nav-' + pageId);
+            if (navLink) navLink.classList.add('active');
+            
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Render Products
+        function renderProducts(gridId, filter = 'all') {
+            const grid = document.getElementById(gridId);
+            if (!grid) return;
+            grid.innerHTML = '';
+            
+            let filtered = products;
+            if (gridId === 'homeProductsGrid') {
+                filtered = products.slice(0, 4);
+            } else if (filter !== 'all') {
+                filtered = products.filter(p => p.category === filter);
+            }
+            
+            filtered.forEach(product => {
+                const card = document.createElement('div');
+                card.className = 'product-card';
+                card.innerHTML = `
+                    <div class="product-thumb" onclick="openModal(${product.id})">
+                        <i class="fa-solid fa-book"></i>
+                        <span>LXE Creative</span>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">${product.category === 'kids' ? 'Kids (Ages 3-8)' : 'Adult & Puzzles'}</div>
+                        <h3 class="product-title" onclick="openModal(${product.id})">${product.title}</h3>
+                        <p class="product-description">${product.description}</p>
+                        <div class="product-footer">
+                            <span class="product-price">$${product.price.toFixed(2)}</span>
+                            <div class="card-actions">
+                                <button class="btn-icon" onclick="addToCart(${product.id})" title="Add to Cart"><i class="fa-solid fa-bag-shopping"></i></button>
+                                <a href="${product.amazonUrl}" target="_blank" class="btn-icon btn-amazon" title="Buy on Amazon"><i class="fa-brands fa-amazon"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        // Shop Filters
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                e.target.classList.add('active');
+                renderProducts('shopProductsGrid', e.target.getAttribute('data-filter'));
+            });
+        });
+
+        // Cart Management
+        function addToCart(productId) {
+            const product = products.find(p => p.id === productId);
+            const existing = cart.find(item => item.id === productId);
+            if (existing) {
+                existing.quantity += 1;
+            } else {
+                cart.push({ ...product, quantity: 1 });
+            }
+            updateCartUI();
+            openCart();
+        }
+
+        function removeFromCart(productId) {
+            cart = cart.filter(item => item.id !== productId);
+            updateCartUI();
+        }
+
+        function updateCartUI() {
+            document.getElementById('cartCount').textContent = cart.reduce((sum, item) => sum + item.quantity, 0);
+            const cartBody = document.getElementById('cartBody');
+            
+            if (cart.length === 0) {
+                cartBody.innerHTML = `<p style="color: var(--text-muted); text-align: center; padding: 40px 0;">Your shopping bag is empty.</p>`;
+                document.getElementById('cartSubtotal').textContent = '$0.00';
+                return;
+            }
+
+            cartBody.innerHTML = '';
+            let subtotal = 0;
+
+            cart.forEach(item => {
+                subtotal += item.price * item.quantity;
+                const cartItem = document.createElement('div');
+                cartItem.className = 'cart-item';
+                cartItem.innerHTML = `
+                    <div class="cart-item-icon"><i class="fa-solid fa-book"></i></div>
+                    <div class="cart-item-details">
+                        <div class="cart-item-title">${item.title}</div>
+                        <div class="cart-item-price">$${item.price.toFixed(2)} × ${item.quantity}</div>
+                    </div>
+                    <button class="cart-item-remove" onclick="removeFromCart(${item.id})"><i class="fa-solid fa-trash-can"></i></button>
+                `;
+                cartBody.appendChild(cartItem);
+            });
+
+            document.getElementById('cartSubtotal').textContent = `$${subtotal.toFixed(2)}`;
+        }
+
+        function openCart() {
+            document.getElementById('cartDrawer').classList.add('open');
+            document.getElementById('overlay').classList.add('active');
+        }
+
+        function closeCart() {
+            document.getElementById('cartDrawer').classList.remove('open');
+            document.getElementById('overlay').classList.remove('active');
+        }
+
+        document.getElementById('cartToggleBtn').addEventListener('click', openCart);
+        document.getElementById('cartCloseBtn').addEventListener('click', closeCart);
+        document.getElementById('overlay').addEventListener('click', () => {
+            closeCart();
+            closeModal();
+        });
+
+        // Modal Management
+        function openModal(productId) {
+            const product = products.find(p => p.id === productId);
+            document.getElementById('modalContent').innerHTML = `
+                <div class="modal-image">
+                    <i class="fa-solid fa-book-open" style="font-size: 5rem; color: var(--accent-botanical); margin-bottom: 20px;"></i>
+                    <span style="font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted);">LXE Creative Studio</span>
+                </div>
+                <div class="modal-details">
+                    <div>
+                        <span class="product-category">${product.category === 'kids' ? 'Kids (Ages 3-8)' : 'Adult & Puzzles'}</span>
+                        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.8rem; margin: 10px 0 15px;">${product.title}</h2>
+                        <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 25px; line-height: 1.6;">${product.description}</p>
+                        <div style="font-size: 1.5rem; font-weight: 600; margin-bottom: 25px;">$${product.price.toFixed(2)}</div>
+                    </div>
+                    <div style="display: flex; gap: 12px; flex-direction: column;">
+                        <button class="btn-botanical" onclick="addToCart(${product.id}); closeModal();" style="justify-content: center; border-radius: 4px;">Add to Website Cart</button>
+                        <a href="${product.amazonUrl}" target="_blank" class="btn-botanical" style="justify-content: center; border-radius: 4px; background-color: #FF9900; color: #111; font-weight: 600;"><i class="fa-brands fa-amazon"></i> Buy on Amazon</a>
+                    </div>
+                </div>
+            `;
+            document.getElementById('productModal').classList.add('open');
+            document.getElementById('overlay').classList.add('active');
+        }
+
+        function closeModal() {
+            document.getElementById('productModal').classList.remove('open');
+            document.getElementById('overlay').classList.remove('active');
+        }
+
+        document.getElementById('modalCloseBtn').addEventListener('click', closeModal);
+
+        // FAQ Toggle
+        function toggleFaq(item) {
+            item.classList.toggle('active');
+        }
+
+        // Contact Handlers
+        function handleGeneralContact(e) {
+            e.preventDefault();
+            alert('Thank you for your message! Angelica will get back to you shortly.');
+            e.target.reset();
+        }
+
+        function handleWholesaleContact(e) {
+            e.preventDefault();
+            alert('Thank you for your wholesale inquiry! Our team will review your application and contact you within 2 business days.');
+            e.target.reset();
+        }
+
+        // Initial Renders
+        renderProducts('homeProductsGrid');
+        renderProducts('shopProductsGrid');
+    </script>
+</body>
+</html>
+```[cite: 1, 2, 3, 4, 5, 6, 7, 8]
